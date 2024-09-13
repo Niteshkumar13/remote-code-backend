@@ -5,8 +5,8 @@ RUN apk update && apk add --no-cache python3 python3-dev build-base openjdk11 gc
 COPY package.json .
 RUN npm install
 COPY . .
-RUN chmod -R a-w /api && chmod -R u+w /api/runtime
 RUN chown -R appuser:appgroup /api
+RUN chmod -R a-w /api && chmod -R u+w /api/runtime
 USER appuser
 EXPOSE 3001
 ENV NODE_ENV=production
