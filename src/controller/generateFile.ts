@@ -21,7 +21,6 @@ const generateFile = async (language: string, code: string, input: string | unde
     await fs.promises.writeFile(filepath, code);
     return { filepath, inputFile };
   } catch (error) {
-    console.error("Error generating file:", error);
     throw new Error("Failed to generate file");
   }
 }
