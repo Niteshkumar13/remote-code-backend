@@ -3,7 +3,7 @@ import fs from "fs";
 import { v4 as uuidv4 } from "uuid";
 
 const cDir = path.join(__dirname, "../..", "runtime");
-console.log(cDir)
+
 
 if (!fs.existsSync(cDir)) {
   fs.mkdirSync(cDir, { recursive: true });
